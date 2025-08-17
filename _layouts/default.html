@@ -8,53 +8,45 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-E00L9PT3V9');
   </script>
   <title>{{ site.name }}</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
   <meta name="author" content="{{ site.name }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
 </head>
 
 <body>
   <table class="outer" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;">
     <tr style="padding:0px">
-      <td style="padding:2.5%;width:100%;text-align:center;vertical-align:middle">
+      <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Atharva Atul Rege
-              </h1>
-              <p style="text-align: justify;">I am a third-year undergraduate student at the <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka (NITK), Surathkal</a>, pursuing a major in Computer Science and Engineering.
-              </p>
-              <p style="text-align: justify;">I have worked as a Research Intern at the <a href="https://cambum.net/I3D.htm">I3D Lab</a>, <a href="https://www.nitk.ac.in/">Indian Institute of Science (IISc), Bengaluru,</a> where I worked on developing diffusion-based methods for modifying the material properties of foreground objects, under the guidance of <a href="https://cambum.net/PB/">Prof. Pradipta Biswas</a>.
-              </p>
-            
-              <p style="text-align:center">
+            <td class="intro-left" style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>Atharva Atul Rege</h1>
+              <p style="text-align: justify;">I am a third-year undergraduate student at the <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka (NITK), Surathkal</a>, pursuing a major in Computer Science and Engineering.</p>
+              <p style="text-align: justify;">I have worked as a Research Intern at the <a href="https://cambum.net/I3D.htm">I3D Lab</a>, <a href="https://www.nitk.ac.in/">Indian Institute of Science (IISc), Bengaluru,</a> where I worked on developing diffusion-based methods for modifying the material properties of foreground objects, under the guidance of <a href="https://cambum.net/PB/">Prof. Pradipta Biswas</a>.</p>
+              <p style="text-align:center;">
                 <a target="_blank" href="https://mailhide.io/en"> Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/Atharva-Rege">GitHub</a> &nbsp;/&nbsp;
                 <a href="">Google Scholar</a> &nbsp;/&nbsp;
                 <a href="https://www.linkedin.com/in/atharva-rege-467543312/"> LinkedIn </a>
               </p>
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <img style="width:100%;max-width:100%" alt="profile photo" src="images/Atharva-Photo-round.JPG">
+            <td class="intro-right" style="padding:2.5%;width:40%;max-width:40%;">
+              <img style="width:100%;max-width:100%;" alt="profile photo" src="images/Atharva-Photo-round.JPG">
             </td>
           </tr>
         </table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
-            <td  style="padding:2.5%;width:100%;text-align:center;vertical-align:middle">
+            <td  style="padding:2.5%;width:100%;text-align:left;vertical-align:middle">
               <h2>Research Interests</h2>
               <p>
                 I'm interested in Computer Vision, Generative Modeling and Natural Language Processing.
@@ -62,72 +54,49 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
-            <td style="padding:2.5%;width:100%;text-align:center;vertical-align:middle">
+            <td style="padding:2.5%;width:100%;text-align:left;vertical-align:middle">
               <h2>News</h2>
               <ul>
-              <li><strong>[05/2025]</strong>: Joined I3D Lab, IISc as a Research Intern.</li>
-              <li><strong>[04/2025]</strong>: Displayed our project, 'The Brush of Spells: Text-Guided Image Inpainitng' at the NITK Project Exposition 2025.</li>
-             </ul>
+                <li><strong>[05/2025]</strong>: Joined I3D Lab, IISc as a Research Intern.</li>
+                <li><strong>[04/2025]</strong>: Displayed our project, 'The Brush of Spells: Text-Guided Image Inpainitng' at the NITK Project Exposition 2025.</li>
+              </ul>
             </td>
           </tr>
         </table>
-          
-        {% for post in site.posts %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle;text-align: justify;">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
 
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.paper %}
-              <a href="{{post.paper}}">Paper</a> /
-              {% endif %}
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arXiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">Video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">Code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">Poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">Slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">Website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">Youtube</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
+        {% for post in site.posts %}
+        <tr>
+          <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+            <img src="tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+          </td>
+          <td style="padding:2.5%;width:75%;vertical-align:middle;text-align: justify;">
+            <h3>{{post.title}}</h3><br>
+            {{post.authors}}<br>
+            <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}<br>
+            {% if post.paper %}<a href="{{post.paper}}">Paper</a> /{% endif %}
+            {% if post.arxiv %}<a href="{{post.arxiv}}">arXiv</a> /{% endif %}
+            {% if post.video %}<a href="{{post.video}}">Video</a> /{% endif %}
+            {% if post.code %}<a href="{{post.code}}">Code</a> /{% endif %}
+            {% if post.poster %}<a href="{{post.poster}}">Poster</a> /{% endif %}
+            {% if post.slides %}<a href="{{post.slides}}">Slides</a> /{% endif %}
+            {% if post.website %}<a href="{{post.website}}">Website</a> /{% endif %}
+            {% if post.youtube %}<a href="{{post.youtube}}">Youtube</a> /{% endif %}
+            <p></p>
+            {{ post.excerpt }}
+          </td>
+        </tr>
+        {% endfor %}
+
+        <br><br><br>
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:0px">
-              <br>
               <p style="text-align:center;font-size:small;">
-                  Source code from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman</a>.
+                Source code from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman</a>.
               </p>
             </td>
           </tr>
@@ -135,7 +104,20 @@
       </td>
     </tr>
   </table>
+
+  <!-- responsive behavior for intro (mobile) -->
+  <style>
+    @media only screen and (max-width: 600px) {
+      .intro-left, .intro-right {
+        width: 100% !important;
+        display: block;
+      }
+      .intro-right {
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+  </style>
+
 </body>
-
 </html>
-
