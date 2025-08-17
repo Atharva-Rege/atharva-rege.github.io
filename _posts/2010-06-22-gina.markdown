@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Brush of Spells: Text-Guided Image Inpainting"
-date:   November 2024 - April 2025
+duration:   November 2024 - April 2025
 image: /images/TBOS.jpg
 categories: project
 course: " IEEE NITK"
