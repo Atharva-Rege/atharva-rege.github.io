@@ -6,7 +6,7 @@ image: /images/TBOS.jpg
 category: project
 course: " IEEE NITK"
 author: ""
-date: 2025-04-21 22:21:59 +00:00
+date: 2024-08-16 22:21:59 +00:00
 subtitle: "A low power, wireless sensor"
 ---
 I helped Anita Flynn and Thomas Watteyne build these small sensors and wrote firmware. 
