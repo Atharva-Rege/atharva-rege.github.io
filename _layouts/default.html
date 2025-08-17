@@ -80,7 +80,12 @@
            {% if post.category == "publication" %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+             {% assign ext = post.image | split: '.' | last %}
+              {% if ext == "gif" or ext == "GIF" %}
+                <img src="{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;">
+              {% else %}
+                <img src="tn{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;">
+              {% endif %}
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle;text-align: justify;">
               <h3>{{post.title}}</h3>
@@ -115,6 +120,7 @@
               {% endif %}
               <p></p>
               {{ post.excerpt }}
+            <a href="{{ post.url }}">Read more →</a>
             </td>
           </tr>
            {% endif %}
@@ -125,7 +131,12 @@
            {% if post.category == "project" %}
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+              {% assign ext = post.image | split: '.' | last %}
+              {% if ext == "gif" or ext == "GIF" %}
+                <img src="{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;">
+              {% else %}
+                <img src="tn{{ post.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;">
+              {% endif %}
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle;text-align: justify;">
               <h3>{{post.title}}</h3>
@@ -161,6 +172,7 @@
               {% endif %}
               <p></p>
               {{ post.excerpt }}
+            <a href="{{ post.url }}">Read more →</a>
             </td>
           </tr>
            {% endif %}
