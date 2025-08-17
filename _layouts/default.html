@@ -68,7 +68,7 @@
               <h2>News</h2>
               <ul>
               <li><strong>[05/2025]</strong>: Joined I3D Lab, IISc as a Research Intern.</li>
-              <li><strong>[04/2025]</strong>: Displayed our project, 'The Brush of Spells: Text-Guided Image Inpainting' at the NITK Project Exposition 2025.</li>
+              <li><strong>[04/2025]</strong>: Displayed our project, "The Brush of Spells: Text-Guided Image Inpainting" at the NITK Project Exposition 2025.</li>
              </ul>
             </td>
           </tr>
@@ -91,8 +91,12 @@
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
-              <em>{{post.venue}}</em>
-              {{post.duration}}
+              
+              {% if post.venue %}
+                <em>{{ post.venue }}</em> – {{ post.duration }}
+              {% else %}
+                {{ post.duration }}
+              {% endif %}
               <br>
               {% if post.paper %}
               <a href="{{post.paper}}">Paper</a> /
@@ -142,9 +146,11 @@
               <h3>{{post.title}}</h3>
               <br>
               {{post.authors}}
-
-              <br>
-              <em>{{post.venue}}</em>, {{post.duration}}
+              {% if post.venue %}
+                <em>{{ post.venue }}</em> – {{ post.duration }}
+              {% else %}
+                {{ post.duration }}
+              {% endif %}
               <br>
               {% if post.paper %}
               <a href="{{post.paper}}">Paper</a> /
