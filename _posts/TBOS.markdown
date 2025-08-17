@@ -3,9 +3,10 @@ layout: post
 title:  "The Brush of Spells: Text-Guided Image Inpainting"
 duration:   November 2024 - April 2025
 image: /images/TBOS.jpg
-categories: project
+category: project
 course: " IEEE NITK"
 author: ""
+date: 2025-04-21 22:21:59 +00:00
 subtitle: "A low power, wireless sensor"
 ---
 I helped Anita Flynn and Thomas Watteyne build these small sensors and wrote firmware. 
