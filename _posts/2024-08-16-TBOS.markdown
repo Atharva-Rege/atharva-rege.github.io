@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "The Brush of Spells"
+title:  "The Brush of Spells: Text-Guided Image Inpainting"
 duration: "November 2024 - April 2025"
 image: /images/TBOS.jpg
 category: project
 course: " IEEE NITK"
 date: 2024-08-16 22:21:59 +00:00
-subtitle: "Text-Guided Image Inpainting"
+subtitle: ""
+code: https://github.com/IEEE-NITK/text-guided-image-inpainting 
 ---
 Implemented MMFL: Multimodal Fusion Learning for Text-Guided Image Inpainting using Generative Adversarial Networks (GANs), leveraging a multimodal architecture to inpaint images based on textual prompts.
