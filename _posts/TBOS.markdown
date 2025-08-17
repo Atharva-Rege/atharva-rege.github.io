@@ -1,11 +1,10 @@
 ---
 layout: post
 title:  "The Brush of Spells: Text-Guided Image Inpainting"
-duration:   November 2024 - April 2025
+duration: "November 2024 - April 2025"
 image: /images/TBOS.jpg
 category: project
 course: " IEEE NITK"
-author: ""
 date: 2024-08-16 22:21:59 +00:00
 subtitle: "A low power, wireless sensor"
 ---
