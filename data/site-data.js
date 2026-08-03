@@ -114,9 +114,9 @@ const SITE_DATA = {
         { text: "Abhishek Mukhopadhyay" },
         { text: "Pradipta Biswas", href: "https://cambum.net/PB/" }
       ],
-      venue: "2Engineering Applications of Artificial Intelligence (Under Review)",
+      venue: "Engineering Applications of Artificial Intelligence (Under Review)",
       links: [
-        { label: "Project Page", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6697402" }
+        { label: "SSRN", href: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6697402" }
       ],
       description: `A diffusion model-based framework for parametric editing of material properties of
         foreground objects within images, enabling fine-grained control over visual attributes and additionally
