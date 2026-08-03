@@ -1,264 +1,81 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Atharva Atul Rege</title>
-
-    <meta name="author" content="Atharva Atul Rege">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atharva Atul Rege</title>
+    <meta name="author" content="Atharva Atul Rege">
+    <meta name="description" content="Atharva Atul Rege — Computer Vision, Generative Modeling &amp; NLP researcher.">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
-
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Atharva Atul Rege
-                </p>
-                <p>
-		I am a third-year undergraduate student at the <a href="https://www.nitk.ac.in/">National Institute of Technology Karnataka (NITK), Surathkal</a>, 
-					pursuing a major in Computer Science and Engineering. I am currently working as a Research Intern at <a href="https://mbzuai.ac.ae/">MBZUAI, UAE</a>, 
-					under the guidance of <a href="https://mbzuai.ac.ae/study/faculty/imran-razzak/">Prof. Imran Razzak</a>.
-					
-					I had also worked as a Research Intern at the <a href="https://cambum.net/I3D.htm">I3D Lab</a>, 
-					<a href="https://iisc.ac.in/">Indian Institute of Science (IISc), Bengaluru</a>, India, under <a href="https://cambum.net/PB/">Prof. Pradipta Biswas</a>.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:atharvaatulrege.231cs114@nitk.edu.in">Email</a> &nbsp;/&nbsp;
-                  <a href="data/resume.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=m1rvB_8AAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/atharva-rege-467543312/">Linkedin</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/Atharva-Rege">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/profile.jpg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
 
-			<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>News</h2>
-            <ul>
-              <li><strong>[12/2025]</strong>: Joined Prof. Imran Razzak's Research Group at MBZUAI, UAE, as a Research Intern.</li>
-              <li><strong>[05/2025]</strong>: Joined I3D Lab, IISc, Bengaluru, as a Research Intern.</li>
-              <li><strong>[04/2025]</strong>: Displayed our project, "The Brush of Spells: Text-Guided Image Inpainting" at the NITK Project Exposition 2025.</li>
-            </ul>
-              </td>
-            </tr>
-          </tbody></table>
-			
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                 I'm interested in Computer Vision, Generative Modeling and Natural Language Processing.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <div class="ambient-blobs" aria-hidden="true">
+      <div class="blob blob-violet"></div>
+      <div class="blob blob-cyan"></div>
+      <div class="blob blob-indigo"></div>
+    </div>
 
-
-    <!-- <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()"  bgcolor="#ffffd0">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='bolt3d_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/bolt3d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-
-          </video></div>
-          <img src='images/bolt3d.jpg' width="160">
+    <header class="site-header">
+      <nav class="nav-inner">
+        <a class="brand" href="#top">AAR</a>
+        <div class="nav-links">
+          <a href="#news">News</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            document.getElementById('bolt3d_image').style.opacity = "1";
-          }
+      </nav>
+    </header>
 
-          function bolt3d_stop() {
-            document.getElementById('bolt3d_image').style.opacity = "0";
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://szymanowiczs.github.io/bolt3d">
-          <span class="papertitle">Bolt3D: Generating 3D Scenes in Seconds</span>
-        </a>
-        <br>
-        <a href="https://szymanowiczs.github.io/">Stanislaw Szymanowicz</a>,
-        <a href="https://jasonyzhang.com">Jason Y. Zhang</a>,
-        <a href="https://pratulsrinivasan.github.io">Pratul Srinivasan</a>,
-        <a href="https://ruiqigao.github.io">Ruiqi Gao</a>,
-        <a href="https://github.com/ArthurBrussee">Arthur Brussee</a>,
-        <a href="https://holynski.org">Aleksander Holynski</a>,
-        <a href="https://ricardomartinbrualla.com">Ricardo Martin-Brualla</a>,
-		<strong>Jonathan T. Barron</strong>,
-        <a href="https://henzler.github.io">Philipp Henzler</a>
-        <br>
-        <em>ICCV</em>, 2025
-        <br>
-        <a href="https://szymanowiczs.github.io/bolt3d">project page</a>
-        /
-        <a href="https://szymanowiczs.github.io/bolt3d">arXiv</a>
-        <p></p>
-        <p>
-		By training a latent diffusion model to directly output 3D Gaussians we enable fast (~6 seconds on a single GPU) feed-forward 3D scene generation.
-        </p>
-      </td>
-    </tr> -->
+    <main id="top">
+      <section class="hero" id="hero">
+        <div class="hero-photo">
+          <img id="profile-photo" src="" alt="Profile photo">
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow">Hi, I'm</p>
+          <h1 id="profile-name"></h1>
+          <p class="tagline" id="profile-tagline"></p>
+          <p class="bio" id="profile-bio"></p>
+          <div class="hero-links" id="profile-links"></div>
+        </div>
+      </section>
 
-		<tr>
-			<td style="padding:16px;width:20%;vertical-align:middle">
-        <img src='images/TuLaBM.jpg' width="160">
-      </td>
-     <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2603.19386">
-          <span class="papertitle">TuLaBM: Tumor-Biased Latent Bridge Matching for Contrast-Enhanced MRI Synthesis</span>
-        </a>
-        <br>
-        <strong>Atharva Atul Rege</strong>,
-        <a href="https://scholar.google.com/citations?user=z4HpNkEAAAAJ&hl=en">Adinath Dukre</a>,
-        <a href="https://www.clevelandclinicabudhabi.ae/en/find-a-doctor/numan-balci">Numan Balci</a>,
-        <a href="https://scholar.google.com/citations?user=j5K7HPoAAAAJ&hl=en">Dwarikanath Mahapatra</a>,
-        <a href="http://scholar.google.com/citations?user=GlXI4N8AAAAJ&hl=en">Imran Razzak</a>
-        <br>
-        <em></em> 29th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI), 2026 (Under Review)
-        <br>
-        <a href="https://arxiv.org/abs/2603.19386">arXiv</a>
-        <p></p>
-        <p>
-	    TuLaBM is a tumor-biased latent bridge matching framework that synthesizes contrast-enhanced MRI from non-contrast MRI by combining latent Brownian bridge transport, tumor-focused attention, and boundary-aware supervision to achieve fast inference and superior tumor-detail preservation over GAN and diffusion-based methods.
-        </p>
-      </td>
-		</tr>
+      <section class="section reveal" id="news">
+        <h2 class="section-title"><span class="section-index">01</span>News</h2>
+        <ul class="news-list" id="news-list"></ul>
+      </section>
 
-		<tr>
-			<td style="padding:16px;width:20%;vertical-align:middle">
-        <img src='images/MRGenAI.jpg' width="160">
-      </td>
-     <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="#">
-          <span class="papertitle">Improving MR Interaction through GenAI</span>
-        </a>
-        <br>
-        <a href="https://scholar.google.com/citations?user=64jHILsAAAAJ&hl=en">Yashaswi Sinha</a>,
-        <a href="https://www.yashkumarsahu.com/">Yash Kumar Sahu</a>,
-        <strong>Atharva Atul Rege</strong>,
-        Rubini M,
-        Subin Raj,
-        <a href="https://scholar.google.com/citations?user=ktqjVN0AAAAJ&hl=en">Himanshu Vishwakarma</a>,
-        Maharudra Rajendra Kharsade,
-        Abhishek Mukhopadhyay,
-        <a href="https://cambum.net/PB/">Pradipta Biswas</a>
-        <br>
-        <em></em> 25th IEEE International Symposium on Mixed and Augmented Reality (ISMAR), 2026 (Under Review)
-        <br>
-        <a href="#">Project Page</a>
-        <p></p>
-        <p>
-	    A diffusion model-based framework for parametric editing of material properties 
-		of foreground objects within images, enabling fine-grained control over visual attributes and additionally
-	    providing seamless compositing onto diverse backgrounds, validated on industrial datasets.
-        </p>
-      </td>
-		</tr>
+      <section class="section reveal" id="research">
+        <h2 class="section-title"><span class="section-index">02</span>Research</h2>
+        <p class="section-intro" id="research-intro"></p>
+        <div class="card-list" id="publications-list"></div>
+      </section>
 
-          </tbody></table>
-			
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Projects</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-	  <tr>
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <img src='images/tbos.jpg' width="160">
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://github.com/IEEE-NITK/text-guided-image-inpainting">
-          <span class="papertitle">The Brush of Spells: Text-Guided Image Inpainting</span>
-        </a>
-        <br>
-        <a href="https://github.com/IEEE-NITK/text-guided-image-inpainting">Source Code</a>
-        /
-        <a href="https://ieee.nitk.ac.in/virtual_expo/report/69">Project Page</a>
-        <p></p>
-        <p>
-		Implemented MMFL: Multimodal Fusion Learning for Text-Guided Image Inpainting using Generative Adversarial Networks (GANs), 
-			leveraging a multimodal architecture to inpaint images based on textual prompts.
-        </p>
-      </td>
-	  </tr>
+      <section class="section reveal" id="projects">
+        <h2 class="section-title"><span class="section-index">03</span>Projects</h2>
+        <div class="card-list" id="projects-list"></div>
+      </section>
+    </main>
 
-		<tr>
-		<td style="padding:16px;width:20%;vertical-align:middle">
-        <img src='images/visionkinect.jpg' width="160">
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://github.com/Atharva-Rege/Vision-Kinect">
-          <span class="papertitle">Vision Kinect</span>
-        </a>
-        <br>
-        <a href="https://github.com/Atharva-Rege/Vision-Kinect">Source Code</a>
-        /
-        <a href="https://ieee.nitk.ac.in/virtual_expo/report/54">Project Page</a>
-        <p></p>
-        <p>
-		Developed a YOLO-based hand gesture recognition system for completely touchless, gesture-controlled interactive Tetris gameplay, 
-			demonstrating applications in Human-Computer Interaction (HCI).
-        </p>
-      </td>
-		</tr>
+    <footer id="contact">
+      <div class="footer-inner">
+        <div class="footer-links" id="footer-links"></div>
+        <p class="credit">Design refreshed with the <code>ui-ux-pro-max</code> Claude skill &middot; originally inspired by
+          <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron</a>'s source code.</p>
+      </div>
+    </footer>
 
-		<tr>
-		<td style="padding:16px;width:20%;vertical-align:middle">
-        <img src='images/finbotai.jpg' width="160">
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://github.com/Atharva-Rege/FinBot-AI">
-          <span class="papertitle">FinBot-AI</span>
-        </a>
-        <br>
-        <a href="https://github.com/Atharva-Rege/FinBot-AI">Source Code</a>
-        /
-        <p></p>
-        Developed a generative AI-powered finance chatbot leveraging OpenAI’s GPT-4 and LangChain, streamlining complex 
-		  financial queries with accurate, context-aware responses and Retrieval-Augmented Generation. Built an interactive web 
-		  interface with Streamlit to enable instant customer support and personalized financial advice.
-        </p>
-      </td>
-	  </tr>
-
-
-			  
-            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:center;font-size:small;">
-                  Website inspired by <a href="https://github.com/jonbarron/jonbarron.github.io">Jon Barron</a>'s source code.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
+    <script src="data/site-data.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
