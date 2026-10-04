@@ -124,6 +124,16 @@ function renderCardList(containerId, items) {
   });
 }
 
+function renderImageCredits(items) {
+  const credits = items
+    .filter((item) => item.imageCredit)
+    .map(({ title, imageCredit: c }) =>
+      `${title.split(':')[0]}: <a href="${c.href}" target="_blank" rel="noopener">${c.author}</a> (${c.license})`);
+  if (credits.length) {
+    document.getElementById('image-credits').innerHTML = `Thumbnails via Wikimedia Commons &middot; ${credits.join(' &middot; ')}`;
+  }
+}
+
 function setupScrollReveal() {
   const sections = document.querySelectorAll('.section');
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -238,6 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderNews(SITE_DATA.news);
   renderCardList('publications-list', SITE_DATA.publications);
   renderCardList('projects-list', SITE_DATA.projects);
+  renderImageCredits([...SITE_DATA.publications, ...SITE_DATA.projects]);
 
   setupScrollReveal();
   setupParticleNetwork();

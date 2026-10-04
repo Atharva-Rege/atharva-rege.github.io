@@ -77,6 +77,7 @@ const SITE_DATA = {
   // TEMPLATE (copy this in):
   //   {
   //     image: "images/your-thumbnail.jpg",
+  //     imageCredit: { author: "Name", license: "CC BY-SA 4.0", href: "https://..." },  // optional, listed in the footer
   //     title: "Paper Title",
   //     titleHref: "https://link-to-paper-or-#",
   //     authors: [
@@ -90,7 +91,8 @@ const SITE_DATA = {
   // --------------------------------------------------------------------
   publications: [
     {
-      image: "images/primed.jpg",
+      image: "images/primed.gif",
+      imageCredit: { author: "Llorenzi", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:RM_glioblastoma_-_trasversale.gif" },
       title: "PRIMED: Prior-Informed Missing-Modality MRI Synthesis Needs No Sampler",
       titleHref: "#",
       authors: [
@@ -104,7 +106,8 @@ const SITE_DATA = {
         forward pass (28.61 dB PSNR, 0.944 SSIM, 0.152 s per volume).`
     },
     {
-      image: "images/dbinr.jpg",
+      image: "images/dbinr.gif",
+      imageCredit: { author: "Hermoye", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Brain_MRI_T1_movie.gif" },
       title: "DB-INR: Dual-Band Implicit Neural Representations for Medical Image Segmentation",
       titleHref: "#",
       authors: [
@@ -122,7 +125,8 @@ const SITE_DATA = {
         inference and 1.5x lower activation memory.`
     },
     {
-      image: "images/tulabm.jpg",
+      image: "images/tulabm.gif",
+      imageCredit: { author: "Llorenzi", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:RM_glioblastoma_-_coronale.gif" },
       title: "TuLaBM: Tumor-Biased Latent Bridge Matching for Contrast-Enhanced MRI Synthesis",
       titleHref: "https://arxiv.org/abs/2603.19386",
       authors: [
@@ -141,7 +145,8 @@ const SITE_DATA = {
         boundary-aware supervision, raising tumor-region SSIM from 73.2 to 88.7 at under 0.097 s per image.`
     },
     {
-      image: "images/scala.jpg",
+      image: "images/scala.gif",
+      imageCredit: { author: "Jccmoon", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Four_chamber_cardiovascular_magnetic_resonance_imaging.gif" },
       title: "SCALA: Semi-supervised Cascade for Left Atrial Scar, Cavity, and Multi-Structure CT Segmentation",
       titleHref: "https://openreview.net/forum?id=WylqMXauzj",
       authors: [
@@ -159,7 +164,8 @@ const SITE_DATA = {
         CT segmentation that recovers the train-to-evaluation grid mismatch with sub-slice offset voting.`
     },
     {
-      image: "images/beat.jpg",
+      image: "images/beat.gif",
+      imageCredit: { author: "Kjetil Lenes", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Apikal4D.gif" },
       title: "BEAT: Boundary-aware Efficient Anatomy-Transfer for Multimodal Mitral Valve Segmentation",
       titleHref: "https://openreview.net/forum?id=yRMVmTyr3S",
       authors: [
@@ -177,7 +183,8 @@ const SITE_DATA = {
         and surgical video.`
     },
     {
-      image: "images/fieldfilm.jpg",
+      image: "images/fieldfilm.gif",
+      imageCredit: { author: "Jacopo Bertolotti", license: "CC0", href: "https://commons.wikimedia.org/wiki/File:Nuclear_magnetization_relaxation.gif" },
       title: "FieldFiLM: A Unified Conditional Generator for the MRI Field-Strength Continuum",
       titleHref: "https://openreview.net/forum?id=4Xh9urpNEr",
       authors: [
@@ -194,7 +201,8 @@ const SITE_DATA = {
         pairs via a signed logarithmic field-gap embedding.`
     },
     {
-      image: "images/radar.jpg",
+      image: "images/radar.gif",
+      imageCredit: { author: "Mikael Häggström", license: "CC0", href: "https://commons.wikimedia.org/wiki/File:Projectional_rendering_of_CT_scan_of_thorax_(thumbnail).gif" },
       title: "RADAR: Acquisition-Adversarial Attention Pooling over a Frozen Chest-Radiograph Foundation Model for Tuberculosis Screening",
       titleHref: "https://openreview.net/forum?id=5qyZJRpe41",
       authors: [
@@ -212,7 +220,8 @@ const SITE_DATA = {
         for tuberculosis screening, reaching 0.84 F1 on an external 4-country cohort.`
     },
     {
-      image: "images/MRGenAI.jpg",
+      image: "images/mrgenai.gif",
+      imageCredit: { author: "MIXTER1980", license: "CC0", href: "https://commons.wikimedia.org/wiki/File:Virtual_Fixtures_Project_(1991-1994)_animated_example.gif" },
       title: "Improving Mixed Reality Interaction through Generative AI",
       titleHref: "#",
       authors: [
@@ -243,6 +252,7 @@ const SITE_DATA = {
   // TEMPLATE (copy this in):
   //   {
   //     image: "images/your-thumbnail.jpg",
+  //     imageCredit: { author: "Name", license: "CC BY-SA 4.0", href: "https://..." },  // optional, listed in the footer
   //     title: "Project Title",
   //     titleHref: "https://github.com/you/repo",
   //     links: [ { label: "Source Code", href: "https://..." }, { label: "Project Page", href: "https://..." } ],
@@ -252,6 +262,7 @@ const SITE_DATA = {
   projects: [
     {
       image: "images/pramaan.gif",
+      imageCredit: { author: "Kjerish", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Order_book_depth_chart.gif" },
       title: "Pramaan",
       titleHref: "https://github.com/Atharva-Rege/Pramaan",
       links: [
@@ -263,14 +274,16 @@ const SITE_DATA = {
         graded automatically against XBRL, it beats naive RAG by 49 points.`
     },
     {
-      image: "images/ghosttext.jpg",
+      image: "images/ghosttext.gif",
+      imageCredit: { author: "JackPotte", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Devanagari_s_स.gif" },
       title: "Ghost-Text Rescue",
       description: `A VLM-based OCR pipeline that recovers Devanagari text from legacy PDFs with broken glyph
         mappings, combining page rasterisation, vision-language inference, and quality-aware routing. Silent
         extraction errors affect 10.7% of pages and 14.6% of public government documents sampled from Common Crawl.`
     },
     {
-      image: "images/afalora.jpg",
+      image: "images/afalora.gif",
+      imageCredit: { author: "Cancer Research UK", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Having_an_endoscopy.webm" },
       title: "AFA-LoRA: MICCAI 2026 RARE Challenge",
       titleHref: "https://github.com/adinathdukre/AFA-LoRA",
       links: [
@@ -282,7 +295,8 @@ const SITE_DATA = {
         sizes itself to a 1,100 s time budget.`
     },
     {
-      image: "images/calitree.jpg",
+      image: "images/calitree.gif",
+      imageCredit: { author: "KieranMaher", license: "Public domain", href: "https://commons.wikimedia.org/wiki/File:SegLungsCompos.gif" },
       title: "CaliTree: MICCAI 2026 ATM'26 Challenge",
       titleHref: "https://github.com/adinathdukre/CaliTree",
       links: [
@@ -294,7 +308,8 @@ const SITE_DATA = {
         voting voxel predictions over a TEASAR skeleton under a tree prior.`
     },
     {
-      image: "images/meddamamba.jpg",
+      image: "images/meddamamba.gif",
+      imageCredit: { author: "KieranMaher", license: "Public domain", href: "https://commons.wikimedia.org/wiki/File:CtOrthor.gif" },
       title: "MedDAMamba",
       titleHref: "https://github.com/Atharva-Rege/MedDAMamba",
       links: [
@@ -304,7 +319,7 @@ const SITE_DATA = {
         classification, paired with domain-adaptive feature learning to maintain accuracy across sites.`
     },
     {
-      image: "images/tbos.jpg",
+      image: "images/tbos.gif",
       title: "The Brush of Spells: Text-Guided Image Inpainting",
       titleHref: "https://github.com/IEEE-NITK/text-guided-image-inpainting",
       links: [
@@ -316,7 +331,8 @@ const SITE_DATA = {
         added contrastive and WGAN objectives to improve text-image alignment.`
     },
     {
-      image: "images/visionkinect.jpg",
+      image: "images/visionkinect.gif",
+      imageCredit: { author: "Brandenads", license: "Public domain", href: "https://commons.wikimedia.org/wiki/File:Tetris_Game_4-Line_Clear.gif" },
       title: "Vision Kinect",
       titleHref: "https://github.com/Atharva-Rege/Vision-Kinect",
       links: [
@@ -328,7 +344,8 @@ const SITE_DATA = {
         Interaction (HCI).`
     },
     {
-      image: "images/finbotai.jpg",
+      image: "images/finbot.gif",
+      imageCredit: { author: "Sophia Guevara", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Bot_Animation.gif" },
       title: "FinBot-AI",
       titleHref: "https://github.com/Atharva-Rege/FinBot-AI",
       links: [
